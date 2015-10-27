@@ -39,7 +39,18 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
+    'redactor',
+    'disqus',
 )
+
+DISQUS_API_KEY = 'f1OuaeufIPG8iPKWTkOvY5K1tn5fMbJFXaT3NkqNKmX3gFoWpl5JyxYvQWVB8ujS'
+DISQUS_WEBSITE_SHORTNAME = 'maximrus'
+
+REDACTOR_OPTIONS = {'lang': 'ru'}
+REDACTOR_UPLOAD = 'media/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static', 'media')
+MEDIA_URL = '/media/'
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',

@@ -1,11 +1,11 @@
 from django.db import models
 from django.utils import timezone
-
+from redactor.fields import RedactorField
 
 class Post(models.Model):
     author = models.ForeignKey('auth.User')
     title = models.CharField(max_length=200)
-    text = models.TextField()
+    text = RedactorField(verbose_name='Text')
     created_date = models.DateTimeField(
             default=timezone.now)
     published_date = models.DateTimeField(
